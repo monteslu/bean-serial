@@ -14,13 +14,19 @@ This example lets you remote control a LightBlue Bean with firmata/nodejs.
 
 The pins exposed to firmata are not the same as what are labeled on the board.
 However your code can use this translation:
+
 D5 = 13
+
 D4 = 12
+
 D3 = 11
+
 D2 = 10
 
 D0 & D1 are currently unavailable
 
 A0 = A4 = 18
+
 A1 = A5 = 19
+
 
