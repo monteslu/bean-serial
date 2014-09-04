@@ -1,0 +1,12 @@
+{
+  "name": "bean-serial",
+  "version": "0.1.0",
+  "description": "Virtual serial device using ble-bean (Lightblue Bean node bindings)",
+  "main": "index.js",
+  "repository": "git@github.com:monteslu/bean-serial.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Montes",
+  "license": "MIT"
+}

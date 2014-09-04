@@ -1,0 +1,16 @@
+{
+  "name": "BeanSerialExample",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Montes",
+  "license": "ISC",
+  "dependencies": {
+    "ble-bean": "^0.8.0",
+    "firmata": "git://github.com/monteslu/firmata#nohandshake",
+    "noble": "^0.3.4"
+  }
+}
