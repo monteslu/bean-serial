@@ -1,8 +1,12 @@
-# BeanSerial Firmata example
+# bean-serial Firmata example
 
 This example lets you remote control a LightBlue Bean with firmata/nodejs.
 
+You can read more about [Jacob Rosenthal's](https://twitter.com/jacobrosenthal) Firmata sketch on [this blog post](http://citizengadget.com/post/96226562047/firmata-on-lightblue-bean).
+
 ![Board](bean_LED.gif)
+
+## Instructions
 
 *  Write [this firmata sketch](https://github.com/jacobrosenthal/arduino/blob/bean/examples/StandardFirmata/StandardFirmata.ino) onto the Bean using the Arduino IDE and the [Bean Getting Started Guide](http://punchthrough.com/bean/getting-started/).
 *  Connect an LED to the Bean. (It's marked pin 5 on board, but it's pin 13 in firmata)
