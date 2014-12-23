@@ -8,5 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luis Montes",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "firmata": "^0.4.0"
+  },
+  "dependencies": {
+    "ble-bean": "^2.0.0"
+  }
 }
