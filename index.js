@@ -43,6 +43,10 @@ BeanSerialPort.prototype.write = function (data, callback) {
   if (!Buffer.isBuffer(data)) {
     data = new Buffer(data);
   }
+
+  //TODO upstream this in noble-device
+  if(!callback) { callback = function(){} }
+
   self.bean.write(data,callback);
 
   console.log('writing buffer:', data);
