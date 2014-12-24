@@ -9,8 +9,8 @@
   "author": "Luis Montes",
   "license": "ISC",
   "dependencies": {
-    "ble-bean": "^0.8.0",
-    "firmata": "git://github.com/monteslu/firmata#nohandshake",
-    "noble": "^0.3.4"
+    "ble-bean": "^2.0.1",
+    "firmata": "^0.4.0",
+    "noble": "^0.3.6"
   }
 }
