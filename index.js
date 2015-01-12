@@ -28,6 +28,7 @@ BeanSerialPort.prototype.open = function (callback) {
 
 
 BeanSerialPort.prototype.write = function (data, callback) {
+  if(!callback) { callback = function(){}; }
 
   var self = this;
   if (!this.bean) {
