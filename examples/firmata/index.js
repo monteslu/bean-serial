@@ -26,36 +26,36 @@ Bean.discover(function(bean){
     process.exit();
   });
 
-  // bean.notifyOne(
-  //   //called when theres data
-  //   function(data){
-  //     if(data && data.length>=2){
-  //       var value = data[1]<<8 || (data[0]);
-  //       console.log("one:", value);
-  //     }
-  //   },
-  //   //called when the notify is successfully or unsuccessfully setup
-  //   function(error){
-  //     if(error) console.log("one setup: ", error);
-  //   });
-
   bean.connectAndSetup(function(){
+
+    // bean.notifyOne(
+    //   //called when theres data
+    //   function(data){
+    //     console.log('sent from bean, should match received on serial');
+    //     console.log(data);
+    //   },
+    //   //called when the notify is successfully or unsuccessfully setup
+    //   function(error){
+    //     if(error) { console.log("one setup: ", error); }
+    //   });
 
     //set color to the built in LED so we know we're connected
     connectedBean.setColor(new Buffer([255, 255, 0]), function(err){
       console.log('set color', err);
     });
 
-    serialPort = new SerialPort(connectedBean);
+    bean.unGate(function(){
+      serialPort = new SerialPort(connectedBean);
 
-    firm = new firmata.Board(serialPort, {skipHandshake: true, samplingInterval:60000}, function (err, ok) {
-      if (err){
-        console.log('could node connect to board----' , err);
-      }
+      firm = new firmata.Board(serialPort, {skipHandshake: true, samplingInterval:60000}, function (err, ok) {
+        if (err){
+          console.log('could node connect to board----' , err);
+        }
 
-      console.log("board loaded", ok);
-      togglePin();
+        console.log("board loaded", ok);
+        togglePin();
 
+      });
     });
 
   });
