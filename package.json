@@ -1,6 +1,6 @@
 {
   "name": "bean-serial",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Virtual node serialport device using ble-bean (Lightblue Bean node bindings)",
   "main": "index.js",
   "repository": "git@github.com:monteslu/bean-serial.git",
