@@ -6,8 +6,10 @@ var stream = require('stream');
 
 function BeanSerialPort(bean, options) {
 
+  var opts = options || {};
   var self = this;
   self.bean = bean;
+  self.logging = (opts.logging || false);
 
   bean.on("serial", function(data, valid, seq, size){
     self.emit('data', data);
@@ -50,26 +52,29 @@ BeanSerialPort.prototype.write = function (data, callback) {
 
   self.bean.write(data,callback);
 
-  console.log('writing buffer:', data);
+  if (self.logging) { console.log('writing buffer:', data); }
 
 };
 
 BeanSerialPort.prototype.close = function (callback) {
-  console.log('closing');
+  if (self.logging) { console.log('closing'); }
+
   if(callback){
     callback();
   }
 };
 
 BeanSerialPort.prototype.flush = function (callback) {
-  console.log('flush');
+  if (self.logging) { console.log('flush'); }
+
   if(callback){
     callback();
   }
 };
 
 BeanSerialPort.prototype.drain = function (callback) {
-  console.log('drain');
+  if (self.logging) { console.log('drain'); }
+
   if(callback){
     callback();
   }
